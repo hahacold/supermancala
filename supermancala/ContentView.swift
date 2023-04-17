@@ -60,7 +60,7 @@ struct ContentView: View {
                                 .bold()
                                 .background(Color.green)
                         }
-                        .fullScreenCover(isPresented: $ShowComputer) {
+                        .fullScreenCover(isPresented: $ShowStatistics) {
                             //ComputerPage()
                         }
                         
@@ -73,8 +73,8 @@ struct ContentView: View {
                                 .bold()
                                 .background(Color.green)
                         }
-                        .fullScreenCover(isPresented: $ShowPlayer) {
-                            //PlayersGamePage()
+                        .fullScreenCover(isPresented: $ShowHowToPlay) {
+                            HowToPlayView(ShowHowToPlay: $ShowHowToPlay)
                         }
                     }.padding(.bottom)
             }
